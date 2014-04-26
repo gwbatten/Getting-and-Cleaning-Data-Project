@@ -1,4 +1,4 @@
-setwd("C:\\Users\\George\\R\\GetCleanData\\Getting and Cleaning Data Project")
+setwd("C:\\Users\\George\\R\\GetCleanData\\Getting-and-Cleaning-Data-Project")
 
 #download zip file of data and unzip
         dirURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles

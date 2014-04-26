@@ -22,7 +22,9 @@ go through every step in this READ ME document.  Here are the basic steps I took
 3. Repeat process for the test data.
 4. Combine the train and test df's together.
 5. Create a logical vector by searching the features df for mean and std.  Use this vector
-to subset the train/test df, i.e. select the columns for mean or std.
+to subset the train/test df, i.e. select the columns for mean or std.  (I chose to select all
+columns regarding mean and std, even if they were means of calculations made by averaging the 
+signals).
 6. Label "activity" column with descriptive names ("walking", "laying", etc.).
 7. Add a column for subjects.  Order df by subjects and activity.
 8. Use plyr to create table of means.
