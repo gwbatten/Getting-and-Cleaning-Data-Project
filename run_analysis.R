@@ -23,7 +23,7 @@ setwd("C:\\Users\\George\\R\\GetCleanData\\Getting and Cleaning Data Project")
         columnames[562] <- "activity" 
         colnames(train) <- columnames
 
-#load train_X and train_y and column bind 
+#load test_X and test_y and column bind 
         testX <- read.table("./UCI HAR Dataset/test/X_test.txt")
         testY <- read.table("./UCI HAR Dataset/test/y_test.txt")
         test <- cbind(testX,testY)
