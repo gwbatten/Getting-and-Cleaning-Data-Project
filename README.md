@@ -1,8 +1,7 @@
 ##Getting-and-Cleaning-Data-Project
 Peer reviewed project for Getting and Cleaning Data class (Coursera) Spring 2014.
 
-I started this program with a script that downloads the zip file of the data, unzips it and places 
-it in a directory.  
+I started this program with a script that downloads the zip file of the data, unzips it, and places it in a directory.  
 
 ```{r}
 dirURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles
@@ -16,20 +15,20 @@ If you already have the data directory, you can comment these lines out (place
 '#' in front of them), before you run the program.
 
 I heavily commented my program to make it (hopefully) easy to follow, so I will not
-go through every step in this READ ME document.  Here are the steps I took:
+go through every step in this READ ME document.  Here are the basic steps I took:
 
 1. Load the training data and training activity data and column bind them together
 2. Read the feature names and use to label the columns of the training data/activity df.
 3. Repeat process for the test data.
 4. Combine the train and test df's together.
 5. Create a logical vector by searching the features df for mean and std.  Use this vector
-to subset the train/test df.
+to subset the train/test df, i.e. select the columns for mean or std.
 6. Label "activity" column with descriptive names ("walking", "laying", etc.).
 7. Add a column for subjects.  Order df by subjects and activity.
 8. Use plyr to create table of means.
 9. Write csv of resulting table.
 
-When using plyr, I ran ddply once organized by "subject" and "activity" and taking the mean
+When using plyr, I ran ddply one time organized by "subject" and "activity" and taking the mean
 of the first column of data.  This produced a 3 column data frame with "subject" and "activity"
 being the first 2 columns.  Next I used ddply (in a loop) on all of the remaining columns, each
 time column binding the third column to the first ddply df. 
